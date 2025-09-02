@@ -1,0 +1,541 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3DCA15F5-E8A7-446E-B9B7-380516C0D27C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>AERMOD</RootNamespace>
+    <AssemblyName>AERMOD</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\Users\Anderson\Desktop\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>false</MapFileExtensions>
+    <SupportUrl>https://aermod.infinityfreeapp.com/</SupportUrl>
+    <ErrorReportUrl>https://aermod.infinityfreeapp.com/</ErrorReportUrl>
+    <TargetCulture>pt-BR</TargetCulture>
+    <ProductName>AERMOD Open</ProductName>
+    <PublisherName>AERMOD Open</PublisherName>
+    <SuiteName>AERMOD Open</SuiteName>
+    <OpenBrowserOnPublish>false</OpenBrowserOnPublish>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <CreateDesktopShortcut>true</CreateDesktopShortcut>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>AERMOD.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>42B13DCA6333C0506DD2F5750005E03BEF687B6D</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>AERMOD_1_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>false</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CoordinateSharp, Version=2.17.1.1, Culture=neutral, PublicKeyToken=f45e02df057b7725, processorArchitecture=MSIL">
+      <HintPath>..\packages\CoordinateSharp.2.17.1.1\lib\net40\CoordinateSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="GMap.NET.Core, Version=2.1.7.0, Culture=neutral, PublicKeyToken=b85b9027b614afef, processorArchitecture=MSIL">
+      <HintPath>..\packages\GMap.NET.Core.2.1.7\lib\net46\GMap.NET.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="GMap.NET.WindowsForms, Version=2.1.6.0, Culture=neutral, PublicKeyToken=b85b9027b614afef, processorArchitecture=MSIL">
+      <HintPath>..\packages\GMap.NET.WinForms.2.1.7\lib\net46\GMap.NET.WindowsForms.dll</HintPath>
+    </Reference>
+    <Reference Include="IronXL, Version=2022.6.0.7362, Culture=neutral, PublicKeyToken=0f5804b6690bad1e, processorArchitecture=MSIL">
+      <HintPath>..\packages\IronXL.Excel.2022.7.7362\lib\net45\IronXL.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Interop, Version=17.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.VisualStudio.Interop.17.4.33103.184\lib\net45\Microsoft.VisualStudio.Interop.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.9.3.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\AERMOD.LIB\Dlls\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="MySqlBackup">
+      <HintPath>..\AERMOD.LIB\Dlls\MySqlBackup.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SQLite, Version=1.0.118.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.118.0\lib\net46\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SQLite.EF6, Version=1.0.118.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.EF6.1.0.118.0\lib\net46\System.Data.SQLite.EF6.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SQLite.Linq, Version=1.0.118.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.Linq.1.0.118.0\lib\net46\System.Data.SQLite.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Device" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.IO.Compression.FileSystem" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Security.Claims, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Claims.4.3.0\lib\net46\System.Security.Claims.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Base.cs" />
+    <Compile Include="CamadaApresentacao\AERMAP\FrmCartesiano.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CamadaApresentacao\AERMAP\FrmCartesiano.Designer.cs">
+      <DependentUpon>FrmCartesiano.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CamadaApresentacao\AERMAP\FrmCartesianoDiscreto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CamadaApresentacao\AERMAP\FrmCartesianoDiscreto.Designer.cs">
+      <DependentUpon>FrmCartesianoDiscreto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CamadaApresentacao\AERMAP\FrmCartesianoEVALFILE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CamadaApresentacao\AERMAP\FrmCartesianoEVALFILE.Designer.cs">
+      <DependentUpon>FrmCartesianoEVALFILE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CamadaApresentacao\AERMAP\FrmCartesianoRede.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CamadaApresentacao\AERMAP\FrmCartesianoRede.Designer.cs">
+      <DependentUpon>FrmCartesianoRede.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CamadaApresentacao\AERMAP\FrmConsultaGrade.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CamadaApresentacao\AERMAP\FrmConsultaGrade.Designer.cs">
+      <DependentUpon>FrmConsultaGrade.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CamadaApresentacao\AERMAP\FrmDominio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CamadaApresentacao\AERMAP\FrmDominio.Designer.cs">
+      <DependentUpon>FrmDominio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CamadaApresentacao\AERMAP\FrmGrade.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CamadaApresentacao\AERMAP\FrmGrade.Designer.cs">
+      <DependentUpon>FrmGrade.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CamadaApresentacao\AERMAP\FrmProcessoAERMAP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CamadaApresentacao\AERMAP\FrmProcessoAERMAP.Designer.cs">
+      <DependentUpon>FrmProcessoAERMAP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CamadaApresentacao\AERMET\FrmDefinicaoAERMET.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CamadaApresentacao\AERMET\FrmDefinicaoAERMET.Designer.cs">
+      <DependentUpon>FrmDefinicaoAERMET.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CamadaApresentacao\AERMET\FrmProcessoAERMET.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CamadaApresentacao\AERMET\FrmProcessoAERMET.Designer.cs">
+      <DependentUpon>FrmProcessoAERMET.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CamadaApresentacao\AERMET\FrmSAM_MESONET.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CamadaApresentacao\AERMET\FrmSAM_MESONET.Designer.cs">
+      <DependentUpon>FrmSAM_MESONET.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CamadaApresentacao\FrmAERMOD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CamadaApresentacao\FrmAERMOD.Designer.cs">
+      <DependentUpon>FrmAERMOD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CamadaApresentacao\FrmArquivo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CamadaApresentacao\FrmArquivo.Designer.cs">
+      <DependentUpon>FrmArquivo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CamadaApresentacao\AERMAP\FrmFonteAERMAP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CamadaApresentacao\AERMAP\FrmFonteAERMAP.Designer.cs">
+      <DependentUpon>FrmFonteAERMAP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CamadaApresentacao\FrmBackup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CamadaApresentacao\FrmBackup.Designer.cs">
+      <DependentUpon>FrmBackup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CamadaApresentacao\FrmAtualizacao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CamadaApresentacao\FrmAtualizacao.Designer.cs">
+      <DependentUpon>FrmAtualizacao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CamadaApresentacao\PRINCIPAL\FrmCoordenadasAERMOD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CamadaApresentacao\PRINCIPAL\FrmCoordenadasAERMOD.Designer.cs">
+      <DependentUpon>FrmCoordenadasAERMOD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CamadaApresentacao\PRINCIPAL\FrmDefinicaoAERMOD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CamadaApresentacao\PRINCIPAL\FrmDefinicaoAERMOD.Designer.cs">
+      <DependentUpon>FrmDefinicaoAERMOD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CamadaApresentacao\PRINCIPAL\FrmParametrosAERMOD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CamadaApresentacao\PRINCIPAL\FrmParametrosAERMOD.Designer.cs">
+      <DependentUpon>FrmParametrosAERMOD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CamadaApresentacao\PRINCIPAL\FrmProcessoAERMOD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CamadaApresentacao\PRINCIPAL\FrmProcessoAERMOD.Designer.cs">
+      <DependentUpon>FrmProcessoAERMOD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmLogin.Designer.cs">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CamadaApresentacao\FrmNomeArquivo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CamadaApresentacao\FrmNomeArquivo.Designer.cs">
+      <DependentUpon>FrmNomeArquivo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CamadaApresentacao\AERMET\FrmSAM_INMET.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CamadaApresentacao\AERMET\FrmSAM_INMET.Designer.cs">
+      <DependentUpon>FrmSAM_INMET.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmSolicitarSenha.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmSolicitarSenha.Designer.cs">
+      <DependentUpon>FrmSolicitarSenha.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CamadaApresentacao\FrmMapa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CamadaApresentacao\FrmMapa.Designer.cs">
+      <DependentUpon>FrmMapa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmUsuario.Designer.cs">
+      <DependentUpon>FrmUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="CamadaApresentacao\AERMAP\FrmCartesiano.resx">
+      <DependentUpon>FrmCartesiano.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CamadaApresentacao\AERMAP\FrmCartesianoDiscreto.resx">
+      <DependentUpon>FrmCartesianoDiscreto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CamadaApresentacao\AERMAP\FrmCartesianoEVALFILE.resx">
+      <DependentUpon>FrmCartesianoEVALFILE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CamadaApresentacao\AERMAP\FrmCartesianoRede.resx">
+      <DependentUpon>FrmCartesianoRede.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CamadaApresentacao\AERMAP\FrmConsultaGrade.resx">
+      <DependentUpon>FrmConsultaGrade.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CamadaApresentacao\AERMAP\FrmDominio.resx">
+      <DependentUpon>FrmDominio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CamadaApresentacao\AERMAP\FrmFonteAERMAP.resx">
+      <DependentUpon>FrmFonteAERMAP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CamadaApresentacao\AERMAP\FrmGrade.resx">
+      <DependentUpon>FrmGrade.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CamadaApresentacao\AERMAP\FrmProcessoAERMAP.resx">
+      <DependentUpon>FrmProcessoAERMAP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CamadaApresentacao\AERMET\FrmDefinicaoAERMET.resx">
+      <DependentUpon>FrmDefinicaoAERMET.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CamadaApresentacao\AERMET\FrmProcessoAERMET.resx">
+      <DependentUpon>FrmProcessoAERMET.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CamadaApresentacao\AERMET\FrmSAM_MESONET.resx">
+      <DependentUpon>FrmSAM_MESONET.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CamadaApresentacao\FrmAERMOD.resx">
+      <DependentUpon>FrmAERMOD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CamadaApresentacao\FrmArquivo.resx">
+      <DependentUpon>FrmArquivo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CamadaApresentacao\FrmBackup.resx">
+      <DependentUpon>FrmBackup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CamadaApresentacao\FrmAtualizacao.resx">
+      <DependentUpon>FrmAtualizacao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CamadaApresentacao\PRINCIPAL\FrmCoordenadasAERMOD.resx">
+      <DependentUpon>FrmCoordenadasAERMOD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CamadaApresentacao\PRINCIPAL\FrmDefinicaoAERMOD.resx">
+      <DependentUpon>FrmDefinicaoAERMOD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CamadaApresentacao\PRINCIPAL\FrmParametrosAERMOD.resx">
+      <DependentUpon>FrmParametrosAERMOD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CamadaApresentacao\PRINCIPAL\FrmProcessoAERMOD.resx">
+      <DependentUpon>FrmProcessoAERMOD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmLogin.resx">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CamadaApresentacao\FrmNomeArquivo.resx">
+      <DependentUpon>FrmNomeArquivo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CamadaApresentacao\AERMET\FrmSAM_INMET.resx">
+      <DependentUpon>FrmSAM_INMET.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmSolicitarSenha.resx">
+      <DependentUpon>FrmSolicitarSenha.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CamadaApresentacao\FrmMapa.resx">
+      <DependentUpon>FrmMapa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmUsuario.resx">
+      <DependentUpon>FrmUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="app.manifest" />
+    <None Include="packages.config" />
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\document_edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AERMOD.LIB\AERMOD.LIB.csproj">
+      <Project>{ea1aae23-eda4-4635-9738-36a140263335}</Project>
+      <Name>AERMOD.LIB</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CamadaAcessoDados\CamadaAcessoDados.csproj">
+      <Project>{ec9138aa-bfe7-4c62-bbbd-ec65af039a1e}</Project>
+      <Name>CamadaAcessoDados</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CamadaLogicaNegocios\CamadaLogicaNegocios.csproj">
+      <Project>{22c54b18-c4b2-4d26-9a83-177544dcb580}</Project>
+      <Name>CamadaLogicaNegocios</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sair.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Atualizar2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ajuda.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\estado.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\accept.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\disk.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pessoas.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\password.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lockOpen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Lupa.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\document_edit_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AERMOD.ico" />
+    <Content Include="AERMOD2.ico" />
+    <None Include="Resources\Atualizar24x24.png" />
+    <None Include="Resources\down_azul.png" />
+    <None Include="Resources\up_azul.png" />
+    <None Include="Resources\PIN_16x16.png" />
+    <None Include="Resources\up.png" />
+    <None Include="Resources\ZoomOutButton15.png" />
+    <None Include="Resources\ZoomInButton15.png" />
+    <None Include="Resources\menu.png" />
+    <None Include="Resources\Menos.png" />
+    <None Include="Resources\Mais.png" />
+    <None Include="Resources\AERMOD16.png" />
+    <None Include="Resources\find.png" />
+    <None Include="Resources\painelControle.png" />
+    <None Include="Resources\Ultimo.png" />
+    <None Include="Resources\Proximo.png" />
+    <None Include="Resources\Anterior.png" />
+    <None Include="Resources\Primeiro.png" />
+    <None Include="Resources\restauraBackup.png" />
+    <None Include="Resources\backupMySql24.png" />
+    <None Include="Resources\backupMySql.png" />
+    <None Include="Resources\backup.png" />
+    <None Include="Resources\distancia.png" />
+    <None Include="Resources\terreno2.png" />
+    <None Include="Resources\terreno.png" />
+    <None Include="Resources\satellite.png" />
+    <None Include="Resources\marcador.png" />
+    <None Include="Resources\ZoomOutButton.bmp" />
+    <None Include="Resources\ZoomInButton.bmp" />
+    <None Include="Resources\gmap.png" />
+    <None Include="Resources\maps.jpg" />
+    <None Include="Resources\itemReferenciado.png" />
+    <None Include="Resources\Condicao.png" />
+    <None Include="Resources\automacao.png" />
+    <None Include="Resources\icon_connect.png" />
+    <None Include="Resources\form.png" />
+    <None Include="Resources\form2.png" />
+    <None Include="Resources\grade.png" />
+    <None Include="Resources\Editar.png" />
+    <None Include="Resources\delete.png" />
+    <None Include="Resources\UploadDonwload.png" />
+    <None Include="Resources\executar.png" />
+    <None Include="Resources\AERMOD24.png" />
+    <None Include="Resources\AERMOD2_24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.8">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.8 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+    <Error Condition="!Exists('..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.118.0\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.118.0\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+  <Import Project="..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.118.0\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets" Condition="Exists('..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.118.0\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets')" />
+</Project>

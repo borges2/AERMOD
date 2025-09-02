@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{22C54B18-C4B2-4D26-9A83-177544DCB580}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CamadaLogicaNegocios</RootNamespace>
+    <AssemblyName>CamadaLogicaNegocios</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ClsAERMAP.cs" />
+    <Compile Include="ClsAERMAP_Cartesiano.cs" />
+    <Compile Include="ClsAERMAP_CartesianoDiscreto.cs" />
+    <Compile Include="ClsAERMAP_EVALFILE.cs" />
+    <Compile Include="ClsAERMAP_CartesianoRede.cs" />
+    <Compile Include="ClsAERMET.cs" />
+    <Compile Include="ClsAERMOD.cs" />
+    <Compile Include="ClsAERMAP_Dominio.cs" />
+    <Compile Include="ClsAERMAP_Fonte.cs" />
+    <Compile Include="ClsFSL.cs" />
+    <Compile Include="ClsHelp.cs" />
+    <Compile Include="ClsLogin.cs" />
+    <Compile Include="ClsParametros.cs" />
+    <Compile Include="ClsSamson.cs" />
+    <Compile Include="ClsTIF.cs" />
+    <Compile Include="FileDownloader.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AERMOD.LIB\AERMOD.LIB.csproj">
+      <Project>{ea1aae23-eda4-4635-9738-36a140263335}</Project>
+      <Name>AERMOD.LIB</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CamadaAcessoDados\CamadaAcessoDados.csproj">
+      <Project>{ec9138aa-bfe7-4c62-bbbd-ec65af039a1e}</Project>
+      <Name>CamadaAcessoDados</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
