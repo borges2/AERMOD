@@ -1,1 +1,1 @@
-<p style="text-align: center;">## AERMOD Open Software</p>
+<p style="text-align: center;">AERMOD Open</p>
