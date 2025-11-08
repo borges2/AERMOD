@@ -1,6 +1,7 @@
 <div align="center">
   
-# AERMOD Input Processing Tool - AERMOD-IPT
+# AERMOD-IPT
+AERMOD Input Processing Tool<br>
 Software created on 2024-10-09
 </div>
 
