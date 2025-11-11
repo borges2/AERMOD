@@ -1,7 +1,8 @@
 <div align="center">
-  <h1>AERMOD-IPT</h1>
-  <br style="line-height: 0;">
-  <h4>Input Processing Tool</h4>
+  <h1>
+    AERMOD-IPT<br>
+    <span style="font-size: 0.1em; font-weight: normal;">Input Processing Tool</span>
+  </h1>
   <p>Software created on 2024-10-09</p>
 </div>
 
