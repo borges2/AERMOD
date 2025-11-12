@@ -7,6 +7,8 @@
   *Tool for preparing input files for the AERMOD atmospheric dispersion model.*
 </div>
 
+## 🚀 Getting Started
+
 ---
 
 ## 📘 About
@@ -58,5 +60,3 @@ For support or inquiries, contact:
 **Universidade Tecnológica Federal do Paraná (UTFPR)**
 
 </div>
-
-## 🚀 Getting Started
